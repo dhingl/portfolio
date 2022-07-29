@@ -33,7 +33,7 @@ h3{
 }
 
 a{
-    color:#fff;
+    color:set-text-color($primary-color);
     text-decoration: none;
 }
 
@@ -42,8 +42,65 @@ header{
     z-index: 2;
     width: 100%;
 }
+//changes
+@-webkit-keyframes colorchange {
+    0% {
+      
+      color: rgb(206, 20, 104);
+    }
+    
+    10% {
+      
+      color: #a76fbf;
+    }
+    
+    20% {
+      
+      color: #1abc9c;
+    }
+    
+    30% {
+      
+      color: #af7046;
+    }
+    
+    40% {
+      
+      color: rgb(124, 124, 212);
+    }
+    
+    50% {
+      
+      color: #ecff80;
+    }
+    
+    60% {
+      
+      color: rgb(255, 0, 0);
+    }
+    
+    70% {
+      
+      color: #2980b9;
+    }
+    80% {
+   
+      color: #318e54;
+    }
+    
+    90% {
+   
+      color: #1b6698;
+    }
+    
+    100% {
+      
+      color: pink;
+    }
+}
 .text-secondary{
-    color: $secondary-color;
+    color:#313131;
+    -webkit-animation:colorchange 20s infinite alternate;
 }
 
 main{
@@ -99,6 +156,9 @@ main{
         padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
     }
+    a{
+        color:set-text-color($primary-color);
+}
 }
 //work /projects
 .projects{
@@ -114,6 +174,32 @@ main{
             opacity: 0.5;
             border-color: $secondary-color;
             @include easeOut;
+        }
+    }
+}
+
+//contact page
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    div{
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+
+        &:hover{
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color:set-text-color($secondary-color);
+            span{
+                color:set-text-color($secondary-color);
+            }
         }
     }
 }
@@ -142,7 +228,7 @@ color: #333;
 #main-footer{
     text-align: center;
     padding: 1rem;
-    background: darken($primary-color,10);
+    background: lighten($primary-color,5);
     color:set-text-color($primary-color);
     height: 60px;
 }

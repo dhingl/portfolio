@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #0d0d0d;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444;
+    background: #000000;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -57,14 +57,39 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #e5f43c; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
+
+@-webkit-keyframes colorchange {
+  0% {
+    color: #0d6efd; }
+  10% {
+    color: #6610f2; }
+  20% {
+    color: #6f42c1; }
+  30% {
+    color: #d63384; }
+  40% {
+    color: #dc3545; }
+  50% {
+    color: #fd7e14; }
+  60% {
+    color: #ffc107; }
+  70% {
+    color: #198754; }
+  80% {
+    color: #20c997; }
+  90% {
+    color: #0dcaf0; }
+  100% {
+    color: #a8122b; } }
     .menu .nav-item.current > a {
-      color: #eece1a; }
+      color: #313131;
+      -webkit-animation: colorchange 20s infinite alternate; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +101,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #eece1a; }
+      color: #e5f43c; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -94,7 +119,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #000000;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -112,7 +137,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(0, 0, 0, 0.9); }
 
 h1,
 h2,
@@ -128,7 +153,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(5, 5, 5, 0.5); }
 
 a {
   color: #fff;
@@ -139,8 +164,33 @@ header {
   z-index: 2;
   width: 100%; }
 
+@-webkit-keyframes colorchange {
+  0% {
+    color: #ce1468; }
+  10% {
+    color: #a76fbf; }
+  20% {
+    color: #1abc9c; }
+  30% {
+    color: #af7046; }
+  40% {
+    color: #7c7cd4; }
+  50% {
+    color: #ecff80; }
+  60% {
+    color: red; }
+  70% {
+    color: #2980b9; }
+  80% {
+    color: #318e54; }
+  90% {
+    color: #1b6698; }
+  100% {
+    color: pink; } }
+
 .text-secondary {
-  color: #eece1a; }
+  color: #313131;
+  -webkit-animation: colorchange 20s infinite alternate; }
 
 main {
   padding: 4rem;
@@ -150,7 +200,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #eece1a;
+        color: #e5f43c;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -166,7 +216,7 @@ main {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #eece1a 3px solid; }
+    border: #e5f43c 3px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5 rem; }
@@ -177,9 +227,11 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #0d0d0d;
     padding: 0.5rem;
-    border-bottom: #eece1a 5px solid; }
+    border-bottom: #e5f43c 5px solid; }
+  .about-info a {
+    color: #fff; }
 
 .projects {
   display: grid;
@@ -190,8 +242,27 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #eece1a;
+      border-color: #e5f43c;
       transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #e5f43c;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -199,7 +270,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #eece1a;
+    background: #e5f43c;
     color: #000; }
 
 .btn-dark {
@@ -207,13 +278,13 @@ main {
   color: #fff; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: gray;
   color: #333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
+  background: #0d0d0d;
   color: #fff;
   height: 60px; }
 

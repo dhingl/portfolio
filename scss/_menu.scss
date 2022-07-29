@@ -38,6 +38,7 @@
     position: fixed;
     top: 0;
     width: 100%;
+    // opacity 0.9
     opacity: 0.9;
     visibility: hidden;
     &.show{
@@ -57,7 +58,7 @@
     &-nav{
         margin: 0;
         padding: 0;
-        background: darken($primary-color, 5);
+        background: lighten($primary-color, 5);
         list-style: none;
         transform: translate3d(0,-100%,0);
         @include easeOut;
@@ -78,6 +79,7 @@
         background: url('../img/portrait.jpg');
         border-radius: 50%;
         border: solid 3px $secondary-color;
+      
     }
 }
 
@@ -87,9 +89,65 @@
     &.show{
         transform: translate3d(0,0,0);
     }
-
+    @-webkit-keyframes colorchange {
+        0% {
+          
+          color: #0d6efd;
+        }
+        
+        10% {
+          
+          color:#6610f2;
+        }
+        
+        20% {
+          
+          color: #6f42c1;
+        }
+        
+        30% {
+          
+          color: #d63384;
+        }
+        
+        40% {
+          
+          color: #dc3545;
+        }
+        
+        50% {
+          
+          color: #fd7e14;
+        }
+        
+        60% {
+          
+          color: #ffc107;
+        }
+        
+        70% {
+          
+          color: #198754;
+        }
+        80% {
+       
+          color: #20c997;
+        }
+        
+        90% {
+       
+          color:#0dcaf0;
+        }
+        
+        100% {
+          
+          color: rgb(168, 18, 43);
+        }
+    }
     &.current>a{
-        color: $secondary-color;
+        // color: $secondary-color;
+        color:#313131;
+    -webkit-animation:colorchange 20s infinite alternate;
     }
 }
 
